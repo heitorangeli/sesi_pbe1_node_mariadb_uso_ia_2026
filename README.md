@@ -77,11 +77,11 @@ npm run dev
 
 | Método | Rota | Descrição |
 | :--- | :--- | :--- |
-| **GET** | `/residuos` | Retorna a lista de resíduos. |
-| **GET** | `/residuos/resumo` | Retorna a ocorrência específica pela situação. |
-| **DELETE** | `/residuos/id` | Remove a ocorrência referente ao id |
-| **POST** | `/residuos` | Cadastra uma nova ocorrência com auto increment. |
-| **PATCH** | `/residuos/id` | Atualiza as informações da ocorrência pelo id. |
+| **GET** | `/usoia` | Retorna a lista de resíduos. |
+| **GET** | `/usoia/resumo` | Retorna a ocorrência específica pela situação. |
+| **DELETE** | `/usoia/id` | Remove a ocorrência referente ao id |
+| **POST** | `/usoia` | Cadastra uma nova ocorrência com auto increment. |
+| **PATCH** | `/usoia/id` | Atualiza as informações da ocorrência pelo id. |
 
 ## Exemplos de requisição e testes com o Insomnia
 
@@ -100,20 +100,8 @@ npm run dev
 - ### Login realizado com sucesso:
 ![POST](docs/login_success.png)
 
-- ### Login negado (credenciais inválidas):
+- ### Login negado:
 ![POST](docs/login_denied.png)
-
-- ### Listar todos os resíduos:
-![GET](docs/get_waste.png)
-
-- ### Resumo das ocorrências de resíduos:
-![GET](docs/overview_waste.png)
-
-- ### Cadastrar uma nova ocorrência de resíduo:
-![POST](docs/post_waste.png)
-
-- ### Atualizar informações de um resíduo:
-![PATCH](docs/patch_waste.png)
 
 - ### Remover uma ocorrência de resíduo:
 ![DELETE](docs/delete_waste.png)
