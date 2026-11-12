@@ -20,6 +20,12 @@ class UsuarioModel {
     static async delete(id, callback) {
         db.query('DELETE FROM usuario WHERE id = ?', [id], callback);
     }
+
+        // Exemplo de como ficaria no model
+    static login(email, senha, callback) {
+        const sql = 'SELECT id, nome, email FROM usuario WHERE email = ? AND senha = password(?);';
+        db.query(sql, [email, senha], callback);
+    }
 }
 
 module.exports = UsuarioModel;

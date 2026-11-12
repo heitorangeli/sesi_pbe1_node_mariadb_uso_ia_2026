@@ -41,6 +41,26 @@ class UsuarioController {
             res.json({ message: 'Removido com sucesso!' });
         });
     }
+
+    static login(req, res) {
+        const { email, senha } = req.body;
+
+        UsuarioModel.login(email, senha, (err, results) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).json({ erro: 'Erro interno ao realizar login' });
+            }
+            
+            if (results.length === 0) {
+                return res.status(401).json({ mensagem: 'Acesso negado, credenciais inválidas' });
+            }
+            
+            return res.status(200).json({
+                mensagem: 'Login realizado com sucesso!',
+                usuario: results[0]
+            });
+        });
+    }
 }
 
 module.exports = UsuarioController;
